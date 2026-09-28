@@ -1,0 +1,15 @@
+[package]
+name = "RustMinesweeper"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+macroquad = "0.4.15"
+rand = "0.10.2"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+strip = true
+panic = "abort"
